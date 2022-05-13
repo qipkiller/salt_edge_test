@@ -28,7 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-
 gem 'devise'
 
 group :development, :test do
@@ -45,6 +44,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'rubocop', require: false
 end
 
 group :test do
@@ -57,3 +57,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development, :test do
+    # There may be other lines in this block already. Simply append the following after:
+    %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+        gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main' # Previously '4-0-dev' or '4-0-maintenance' branch
+    end
+end

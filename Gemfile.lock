@@ -1,3 +1,50 @@
+GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: bc9bb2da423b2cf6b7e53f1307c3ef2d24fceb7b
+  branch: main
+  specs:
+    rspec-core (3.12.0.pre)
+      rspec-support (= 3.12.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 87588b1614a7be1c6560c5a024ccf8764fd125b9
+  branch: main
+  specs:
+    rspec-expectations (3.12.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.12.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: d8256aa5eadffa8d3cb59dffc66a653d3e287064
+  branch: main
+  specs:
+    rspec-mocks (3.12.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.12.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 528ff01c6bf3e218b1ba019520df618b6cec3427
+  branch: main
+  specs:
+    rspec-rails (6.0.0.pre)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (= 3.12.0.pre)
+      rspec-expectations (= 3.12.0.pre)
+      rspec-mocks (= 3.12.0.pre)
+      rspec-support (= 3.12.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 5fdadceffbd87962ce3f5152c28e968152d89d30
+  branch: main
+  specs:
+    rspec-support (3.12.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +109,7 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ast (2.4.2)
     bcrypt (3.1.17)
     bindex (0.8.1)
     bootsnap (1.11.1)
@@ -86,10 +134,15 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.5.0)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    http-cookie (1.0.4)
+      domain_name (~> 0.5)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -106,10 +159,12 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime-types (2.99.3)
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.5.1)
+    netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
@@ -117,6 +172,9 @@ GEM
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    parallel (1.22.1)
+    parser (3.1.2.0)
+      ast (~> 2.4.1)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -154,6 +212,7 @@ GEM
       method_source
       rake (>= 12.2)
       thor (~> 1.0)
+    rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
@@ -162,7 +221,23 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rexml (3.2.5)
+    rubocop (1.29.1)
+      parallel (~> 1.10)
+      parser (>= 3.1.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.17.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.17.0)
+      parser (>= 3.1.1.0)
+    ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -195,6 +270,10 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.8.1)
+    unicode-display_width (2.1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -232,6 +311,13 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.6)
+  rest-client (~> 1.8)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
+  rubocop
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
