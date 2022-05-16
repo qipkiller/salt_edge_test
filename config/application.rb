@@ -17,6 +17,10 @@ module SaltEdgeApp
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    # config.autoloader = :classic
+    # config.eager_load_paths << Rails.root.join('lib', 'salt_edge')
+    # config.autoload_paths << "#{Rails.root}/lib"
+    # config.eager_load_paths << Rails.root.join('lib')
+    # config.autoload_paths << "#{Rails.root}/app/services"
   end
 end
