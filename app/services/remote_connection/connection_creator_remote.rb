@@ -13,8 +13,8 @@ module RemoteConnection
             fetch_scopes: %w[accounts transactions]
           },
           credentials: {
-            login: @user.email,
-            password: @user.secret
+            login: 'username',
+            password: 'secret'
           }
         }
       }

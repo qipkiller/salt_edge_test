@@ -49,5 +49,10 @@ module SaltEdge
                              collection: collection + resource_collection.collection)
       @rels = resource_collection.rels
     end
+
+
+    def merge(new_collection)
+      @data = OpenStruct.new(meta: @data.meta, collection: @data.collection.push(*new_collection))
+    end
   end
 end

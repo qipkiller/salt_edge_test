@@ -11,16 +11,15 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super
-    if current_user.connections.active.count == 0
-      sign_out unless RemoteConnection::ConnectionCreator.call(current_user)
-    end
+    # if current_user.connections.active.count == 0
+    #   sign_out unless RemoteConnection::ConnectionCreator.call(current_user)
+    # end
   end
 
   # DELETE /resource/sign_out
   def destroy
-    user = current_user
     super
-    RemoteConnection::ConnectionDestroyer.call(user)
+    # RemoteConnection::ConnectionDestroyer.call(user)
   end
 
   # protected

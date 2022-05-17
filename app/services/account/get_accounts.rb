@@ -8,7 +8,11 @@ module Account
       connection = @user.connections.active.first
       if connection
         res = SaltEdge::Client.instance.accounts(connection.remote_id)
-        return res.data if res.response.code == 200
+        res.each do |a|
+
+          puts a.id
+        end
+        return res if res.response.code == 200
       end
       false
     end

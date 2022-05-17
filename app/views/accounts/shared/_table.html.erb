@@ -16,7 +16,7 @@
 				<td><%= account.nature %></td>
 				<td><%= account.balance %></td>
 				<td><%= account.currency_code %></td>
-				<td>Show</td>
+				<td><%= link_to 'Show', transactions_index_path(account_id: account.id) %></td>
 			</tr>
 		<% end %>
 		</tbody>

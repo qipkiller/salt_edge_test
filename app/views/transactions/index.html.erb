@@ -1,6 +1,17 @@
-<h1>Transactions#index</h1>
-<p>Find me in app/views/transactions/index.html.erb</p>
+<h1>Transactions for account <%= @account_id %></h1>
 
-<% if @transactions %>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <% if @status != 'all' %>
+    <%= link_to "All", transactions_index_path(status: 'all', account_id: @account_id), class: 'btn btn-primary' %>
+  <% end %>
+  <% if @status != 'posted' %>
+    <%= link_to "Posted", transactions_index_path(status: 'posted', account_id: @account_id), class: 'btn btn-primary' %>
+  <% end %>
+  <% if @status != 'pending' %>
+    <%= link_to "Pending", transactions_index_path(status: 'pending', account_id: @account_id), class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<% if @transactions  %>
     <%= render :partial => 'transactions/shared/table' %>
 <% end %>

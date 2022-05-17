@@ -1,0 +1,28 @@
+<div class="container">
+	<table id="connections_table" class="table table-striped table-bordered">
+		<thead>
+			<th>ID</th>
+			<th>Remote Connection ID</th>
+			<th>Archived</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+		<% @connections.each do |connection| %>
+			<tr>
+				<td><%= connection.id %></td>
+				<td><%= connection.remote_id %></td>
+				<td><%= connection.arhived ? "Arhived" : "Active" %></td>
+				<td>Show</td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#connections_table').DataTable({
+		"order": [[ 0, 'DESC' ], [ 1, 'asc' ]]
+	});
+  });
+</script>
