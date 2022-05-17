@@ -6,7 +6,7 @@ class ConnectionsController < ApplicationController
   def create
     if current_user.connections.active.count.zero?
       RemoteConnection::ConnectionCreator.call(current_user)
-      redirect_to root_path
+      redirect_to accounts_index_path
     end
   end
 

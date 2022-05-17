@@ -12,9 +12,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    if current_user
-      sign_out unless RemoteConnection::ConnectionCreator.call(current_user)
-    end
   end
 
   # GET /resource/edit
