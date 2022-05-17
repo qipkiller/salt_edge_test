@@ -1,6 +1,6 @@
-require "salt_edge"
+require 'salt_edge'
 
-if Rails.env.production?
+if Rails.env.production? || Rails.env.staging?
   SaltEdge::Client.instance.configure
 else
   api_key = 'pS0REB_L0xKOiYLd0Kqgs8xa2rCUnoukT8vgBHIq5WA'
