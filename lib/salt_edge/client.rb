@@ -2,6 +2,8 @@ require_relative 'client/conn'
 require_relative 'client/connection'
 require_relative 'client/provider'
 require_relative 'client/customer'
+require_relative 'client/account'
+require_relative 'client/transaction'
 
 module SaltEdge
   class Client
@@ -11,6 +13,8 @@ module SaltEdge
     include SaltEdge::Client::Connection
     include SaltEdge::Client::Provider
     include SaltEdge::Client::Customer
+    include SaltEdge::Client::Account
+    include SaltEdge::Client::Transaction
 
     EXPIRATION_TIME = 60
     base_uri 'https://www.saltedge.com'

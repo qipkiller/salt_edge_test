@@ -1,0 +1,34 @@
+<div class="container">
+	<table id="accounts_table" class="table table-striped table-bordered">
+		<thead>
+			<th>Id</th>
+			<th>Mode</th>
+			<th>Status</th>
+			<th>Amount</th>
+			<th>Currency Code</th>
+			<th>Category</th>
+			<th>Created At</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+		<% @transactions.each do |transaction| %>
+			<tr>
+				<td><%= transaction.id %></td>
+				<td><%= transaction.mode %></td>
+				<td><%= transaction.status %></td>
+				<td><%= transaction.amount %></td>
+				<td><%= transaction.currency_code %></td>
+				<td><%= transaction.category %></td>
+				<td><%= transaction.created_at %></td>
+				<td>Show</td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#accounts_table').DataTable();
+  });
+</script>
