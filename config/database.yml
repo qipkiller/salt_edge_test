@@ -69,11 +69,5 @@ test:
 production:
   <<: *default
   database: salt_edge_production
-  username: salt_edge
-  password: <%= ENV['SALT_EDGE_DATABASE_PASSWORD'] %>
-
-staging:
-  <<: *default
-  database: salt_edge_staging
-  username: salt_edge
-  password: <%= ENV['SALT_EDGE_DATABASE_PASSWORD'] %>
+  username: <%= ENV['SALT_EDGE_DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['SALT_EDGE_DATABASE_PASSWORD'] || 'postgres' %>
