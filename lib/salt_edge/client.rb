@@ -23,11 +23,6 @@ module SaltEdge
 
     def configure(app_id = nil, secret = nil, country_code = nil, provider_code = nil, logger = nil)
       @logger = logger
-      app_id ||= ENV['SALTEDGE_APP_ID']
-      secret ||= ENV['SALTEDGE_SECRET']
-      country_code ||= ENV['SALT_EDGE_COUNTRY_CODE']
-
-      provider_code ||= ENV['SALT_EDGE_PROVIDER_CODE']
 
       @country_code = country_code
       @provider_code = provider_code

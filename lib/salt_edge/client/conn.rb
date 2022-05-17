@@ -20,7 +20,7 @@ module SaltEdge
       private
 
       def request(http_method, path, options)
-        logger.debug("Initiate [#{http_method.upcase}] request to path: [#{path}] with options: #{options.inspect}")
+        # logger.debug("Initiate [#{http_method.upcase}] request to path: [#{path}] with options: #{options.inspect}")
         if options.key? :body
           options[:body] = options[:body].to_json
         end
