@@ -20,7 +20,7 @@ module SaltEdge
     base_uri 'https://www.saltedge.com'
     format :json
     attr_accessor :country_code, :provider_code
-    attre_reader :logger
+    attr_reader :logger
 
     def configure(app_id = nil, secret = nil, country_code = nil, provider_code = nil, logger = nil)
       @logger = logger
