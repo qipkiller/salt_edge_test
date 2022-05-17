@@ -4,8 +4,10 @@ require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
-
+# Bundler.require(*Rails.groups)
+if defined?(Bundler)
+  Bundler.require(*Rails.groups(:assets => %w(development test), :profiling => %w[staging development]))
+end
 module SaltEdgeApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
