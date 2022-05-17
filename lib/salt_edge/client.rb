@@ -20,6 +20,7 @@ module SaltEdge
     base_uri 'https://www.saltedge.com'
     format :json
     attr_accessor :country_code, :provider_code
+    attre_reader :logger
 
     def configure(app_id = nil, secret = nil, country_code = nil, provider_code = nil, logger = nil)
       @logger = logger
@@ -39,10 +40,6 @@ module SaltEdge
       }
 
       self.class.default_options.merge!(headers: headers)
-    end
-
-    def logger
-      @logger ||= Logger.new($stdout)
     end
   end
 end
