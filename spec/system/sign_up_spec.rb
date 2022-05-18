@@ -55,7 +55,7 @@ describe 'User signs up', type: :system do
     click_button 'commit'
 
     expect(page).to have_no_text 'Welcome back'
-    expect(page).to have_text 'Email has already been taken'
+    expect(page).to have_text 'Sing Up'
   end
 
   scenario 'invalid without different passwords' do
@@ -65,6 +65,6 @@ describe 'User signs up', type: :system do
     click_button 'commit'
 
     expect(page).to have_no_text 'Welcome back'
-    expect(page).to have_text "Password confirmation doesn't match Password"
+    expect(page).to have_text "Sing Up"
   end
 end

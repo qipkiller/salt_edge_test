@@ -1,0 +1,97 @@
+{
+    "data": [
+        {
+            "id": "748637888651987271",
+            "account_id": "748637888551323974",
+            "duplicated": false,
+            "mode": "normal",
+            "status": "posted",
+            "made_on": "2022-03-18",
+            "amount": 10000.0,
+            "currency_code": "EUR",
+            "description": "Income for Simple account 1 MasterCard",
+            "category": "income",
+            "extra": {
+                "payee": "DE11100110012612442222",
+                "payer": "DE12345678912345678912",
+                "payee_information": "John Smith",
+                "payer_information": "Sample client",
+                "account_balance_snapshot": 2005.5,
+                "categorization_confidence": 1
+            },
+            "created_at": "2022-05-17T10:36:07Z",
+            "updated_at": "2022-05-17T10:36:07Z"
+        },
+        {
+            "id": "748637888660375880",
+            "account_id": "748637888551323974",
+            "duplicated": false,
+            "mode": "normal",
+            "status": "posted",
+            "made_on": "2022-04-17",
+            "amount": 10000.0,
+            "currency_code": "EUR",
+            "description": "Income for Simple account 1 MasterCard",
+            "category": "income",
+            "extra": {
+                "payee": "DE11100110012612442222",
+                "payer": "DE12345678912345678912",
+                "payee_information": "John Smith",
+                "payer_information": "Sample client",
+                "account_balance_snapshot": 2005.5,
+                "categorization_confidence": 1
+            },
+            "created_at": "2022-05-17T10:36:07Z",
+            "updated_at": "2022-05-17T10:36:07Z"
+        },
+        {
+            "id": "748637888660375881",
+            "account_id": "748637888551323974",
+            "duplicated": false,
+            "mode": "normal",
+            "status": "posted",
+            "made_on": "2022-05-15",
+            "amount": 5.0,
+            "currency_code": "EUR",
+            "description": "Sample transaction 1 for 2022-05-17",
+            "category": "fees_and_charges",
+            "extra": {
+                "payee": "DE11100110012612442222",
+                "payer": "DE12345678912345678912",
+                "posting_date": "2022-05-17",
+                "payee_information": "John Smith",
+                "payer_information": "Sample client",
+                "account_balance_snapshot": 2005.5,
+                "categorization_confidence": 0.79
+            },
+            "created_at": "2022-05-17T10:36:07Z",
+            "updated_at": "2022-05-17T10:36:07Z"
+        },
+        {
+            "id": "748637888660375882",
+            "account_id": "748637888551323974",
+            "duplicated": false,
+            "mode": "fee",
+            "status": "posted",
+            "made_on": "2022-05-17",
+            "amount": -5.0,
+            "currency_code": "EUR",
+            "description": "Sample transaction 2 for 2022-05-17",
+            "category": "provider_fee",
+            "extra": {
+                "payee": "DE12345678912345678912",
+                "payer": "DE11100110012612442222",
+                "payee_information": "Sample client",
+                "payer_information": "John Smith",
+                "account_balance_snapshot": 2005.5,
+                "categorization_confidence": 1
+            },
+            "created_at": "2022-05-17T10:36:07Z",
+            "updated_at": "2022-05-17T10:36:07Z"
+        }
+    ],
+    "meta": {
+        "next_id": null,
+        "next_page": null
+    }
+}

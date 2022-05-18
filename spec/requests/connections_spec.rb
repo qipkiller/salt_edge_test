@@ -1,32 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe "Connections", type: :request do
-  describe "GET /index" do
-    it "returns http success" do
-      get "/connections/index"
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # before do
+  #   @user = create :user, customer_id: Faker::Number.number(digits: 10).to_s
+  # end
+  # describe "POST /create" do
+  #   it "returns http success" do
+  #     sign_in @user
+  #     post "/connections"
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
 
-  describe "GET /new" do
-    it "returns http success" do
-      get "/connections/new"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /create" do
-    it "returns http success" do
-      get "/connections/create"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /destroy" do
-    it "returns http success" do
-      get "/connections/destroy"
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # describe "DELETE /destroy" do
+  #   it "returns http success" do
+  #     delete "/connections"
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
 
 end
