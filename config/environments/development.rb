@@ -79,4 +79,5 @@ Rails.application.configure do
     host: 'localhost',
     port: 3000
   }
+  config.hosts << /[a-z0-9\.\-]+\.githubpreview\.dev/
 end
