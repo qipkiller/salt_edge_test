@@ -20,9 +20,10 @@
 </div>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('#connections_table').DataTable({
-		"order": [[ 0, 'DESC' ], [ 1, 'asc' ]]
-	});
-  });
+
+    $(document).ready("turbolinks:load", function(){
+	    $('#connections_table').DataTable({
+			"order": [[ 0, 'DESC' ], [ 1, 'asc' ]]
+		});
+  	});
 </script>

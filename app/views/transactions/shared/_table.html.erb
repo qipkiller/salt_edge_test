@@ -1,5 +1,5 @@
 <div class="container">
-	<table id="accounts_table" class="table table-striped table-bordered">
+	<table id="transactions_table" class="table table-striped table-bordered">
 		<thead>
 			<th>Id</th>
 			<th>Made On</th>
@@ -27,7 +27,10 @@
 </div>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('#accounts_table').DataTable();
-  });
+
+    $(document).ready("turbolinks:load", function(){
+	    $('#transactions_table').DataTable({
+			"order": [[ 0, 'DESC' ], [ 1, 'asc' ]]
+		});
+  	});
 </script>
